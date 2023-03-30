@@ -9,16 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cocoa.mapper.PmsProductMapper;
+import com.cocoa.service.PmsProductService;
 
 @RestController
 @RequestMapping("/")
 public class homeController {
 	
 	@Autowired
-	PmsProductMapper sut;
+	PmsProductService pmsProductService;
 	
 	@GetMapping
-	public Map<String, Object> home() {
-		return sut.test(1);
+	public String home() {
+		return "";
 	}
 }
